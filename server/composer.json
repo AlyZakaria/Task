@@ -1,0 +1,20 @@
+{
+    "name": "aly_zakaria/server",
+    "description": "scandiweb test assigment",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/",
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aly Zakaria"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/var-dumper": "^6.2"
+    }
+}
