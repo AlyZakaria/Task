@@ -10,7 +10,7 @@ class MySqlManager implements DatabaseManager{
 
     private function __construct(){}
 
-    public static function connect(){
+    public static function establish(){
         if(!self::$conn){
             try{
                 self::$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD , DB_DATABASE);
@@ -21,15 +21,23 @@ class MySqlManager implements DatabaseManager{
                     throw new Exception("Table creation failed");
  
             }catch (Exception $exp){
-                echo "The Tables already exists";
+                // echo "The Tables already exists";
             }finally{
                 return self::$conn;
             }
         }
         return self::$conn;
     }
+    public static function connect(){
+        self::$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD , DB_DATABASE);
+        return self::$conn;
+    
+    }
     public static function disconnect(){
-        if(self::$conn)
+        if(self::$conn){
             mysqli_close(self::$conn);
+            self::$conn = null;
+        }
+            
     }
 }

@@ -9,18 +9,18 @@ function Product(props) {
 
     function inputCheck(){
         let newProduct = {...product, checked: !product.checked};
-        setProducts(productsState.map(e => e.Id === newProduct.Id? newProduct: e));
+        setProducts(productsState.map(e => e.sku === newProduct.sku? newProduct: e));
     }
     return (
         <div className="product col-lg-2 col-md-3 col-sm-5 col-12">
             <div className="d-flex justify-content-left check">
-                <input type="checkbox" id = {product.Id} onClick={inputCheck} />
+                <input type="checkbox" id = {product.sku} onClick={inputCheck} />
             </div>
             <div>
-                <p>{product.Id}</p>
-                <p>{product.Name}</p>
-                <p>{(product.Price).toFixed(2)}</p>
-                <p>Size: {product.Size}</p>
+                <p>{product.sku}</p>
+                <p>{product.name}</p>
+                <p>{Number(product.price).toFixed(2)}</p>
+                <p>Size: {product.dimensions}</p>
             </div>
         </div>
     );

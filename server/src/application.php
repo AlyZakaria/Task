@@ -19,8 +19,10 @@ class Application{
     }
     public function run(){
         Env::establish();
-        MysqlManager::connect();
+        MysqlManager::establish();
+        // MysqlManager::disconnect();
         $this->route->resolve();
+
 
     }
 }
