@@ -8,7 +8,7 @@
     border-radius: 15px !important;
     margin: 5px;
     cursor: pointer !important;
-
+    height: 70%;
 }
 .btns{
     justify-content: flex-end;
@@ -17,13 +17,14 @@
 .title{
     padding-left: 0px;
 }
-@media (max-width: 300px){
+@media (max-width: 400px){
     .header button{
         /* height: 80%; */
         border-radius: 15px !important;
         margin: 5px;
-        font-size: 12px;
+        font-size: 15px;
         height: 70%;
+        text-transform: lowercase;
     }
     .btns{
         padding: 0px;

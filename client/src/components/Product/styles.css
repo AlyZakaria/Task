@@ -10,3 +10,6 @@
 .product  p{
     margin: 8px;
 }
+.check > input{
+    cursor: pointer;
+}
