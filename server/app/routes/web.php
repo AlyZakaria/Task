@@ -11,5 +11,3 @@ Route::get('/home' , function() {
 Route::get('/about' , function() {
     echo 'about';
 });
-// Route::get('/' , [HomeController::class,'index']);
-// Route::post('/', [HomeController::class, 'register']);
