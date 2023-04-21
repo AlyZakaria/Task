@@ -31,8 +31,8 @@ function AddProductForm(){
                             <option value="Furniture">Furniture</option>
                         </select> 
                     </div>
+                    {type === "Book" ? <Book />: type === "DVD"? <DVD/>: <Furniture/>}
                 </div>
-                {type === "Book" ? <Book />: type === "DVD"? <DVD/>: <Furniture/>}
             </form>
         </div>
     );
