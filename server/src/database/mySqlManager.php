@@ -16,7 +16,6 @@ class MySqlManager implements DatabaseManager{
                 self::$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD , DB_DATABASE);
                 mysqli_set_charset(self::$conn,"utf8");
                 $sql = file_get_contents(__DIR__ ."\..\..\initalize.sql");
-                // echo($sql);
                 if (!self::$conn->multi_query($sql))                
                     throw new Exception("Table creation failed");
  

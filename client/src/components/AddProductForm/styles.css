@@ -1,0 +1,42 @@
+
+
+
+form > div > div {
+    text-align: left;
+    margin-bottom: 20px;
+}
+form label{
+    margin-right: 78px;
+    font-size: 20px;
+    font-family: sans-serif;
+    /* font-weight: bold; */
+}
+form div > div:nth-child(1) >label{
+    margin-right: 90px;
+}
+form div > div:nth-child(3) >label{
+    margin-right: 57px;
+}
+form input[type="text"]{
+    cursor: text;
+    padding: 5px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+    /* width: 20%; */
+}
+form input[type="text"]:focus{
+    outline: 1px solid rgb(22, 240, 240) !important;
+    /* padding: 10px; */
+}
+
+form select{
+    width: 150px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+}
+
+form select:focus{
+    outline: 1px solid rgb(22, 240, 240) !important;
+}

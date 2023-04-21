@@ -16,3 +16,4 @@ Route::get('/about' , function() {
 });
 
 Route::get('/products', [ProductsController::class, 'all']);
+Route::post('/products' , [ProductsController::class, 'deleteAll']);

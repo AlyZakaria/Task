@@ -7,6 +7,7 @@ function useGetProducts(setProducts){
     useEffect( () =>{
         async function fetchData(){
             const response = await axios.get(url);
+            // console.log(response);
             if(response.status === 200)
                 setProducts(response.data.map((p) =>{
                     return {...p,checked:false}

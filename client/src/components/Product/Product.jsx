@@ -20,7 +20,7 @@ function Product(props) {
                 <p>{product.sku}</p>
                 <p>{product.name}</p>
                 <p>{Number(product.price).toFixed(2)}</p>
-                <p>Size: {product.dimensions}</p>
+                <p>Size: {product.attributes}</p>
             </div>
         </div>
     );

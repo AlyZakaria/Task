@@ -3,11 +3,17 @@
 namespace Src\Http;
 
 class Response{
-    
-    public function method(){
-        return strtolower($_SERVER['REQUEST_METHOD']);    
+    protected $statusCode;
+    protected $data;
+
+    public function __construct($statusCode = null, $data = null){
+        $this->statusCode = $statusCode;
+        $this->data = $data;
     }
-    public function path(){
-        return explode("?",$path)[0];
+
+    public function sendResponse(){
+        echo json_encode($this->data);
+        http_response_code($this->statusCode);
     }
+
 }

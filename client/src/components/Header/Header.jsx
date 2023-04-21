@@ -1,19 +1,19 @@
 import './styles.css';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {ProductsContext} from '../../contexts/productsContext';
 import {useNavigate } from "react-router-dom";
+import useDeleteProducts from "../../shared/useDeleteProducts";
 
 
 function Header(){
     let {productsState , setProducts} = useContext(ProductsContext);
+    let [deleteStatus, setDeleteStatus] = useState(false);
     let navigate = useNavigate();
     function add(){
         navigate('/addproduct')
     }
-    function deleteProducts(){
-        let newProducts = productsState.filter(product => product.checked === false);
-        setProducts(newProducts);
-    }
+    useDeleteProducts(productsState, setProducts, deleteStatus, setDeleteStatus);
+
     return(
         <div className = "container header">
             <div className = "row justify-content-between">
@@ -22,7 +22,7 @@ function Header(){
                 </div>
                 <div className = "col-md-5  col-6 d-flex   btns">
                     <button type="button" className = "btn btn-primary" onClick={add}>ADD</button>
-                    <button type="button" className = "btn btn-danger" onClick={deleteProducts}>MASS DELETE</button>
+                    <button type="button" className = "btn btn-danger" onClick={() => setDeleteStatus(!deleteStatus)}>MASS DELETE</button>
                 </div>
             </div>
             <hr></hr>

@@ -22,7 +22,10 @@ class Route{
     public static function post(string $route , callable|array|string $action){
         self::$routes['post'][$route] = $action;
     }
-    
+    public static function delete(string $route , callable|array|string $action){
+        self::$routes['delete'][$route] = $action;
+    }
+        
     public function resolve(){
         $path = $this->request->path();
         $method = $this->request->method();

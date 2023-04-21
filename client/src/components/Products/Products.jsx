@@ -10,7 +10,7 @@ function Products(){
         <div className="container">
             <div className="row d-flex justify-content-center ">
                 {
-                    productsState.map(product => <Product key = {product.Id} product = {product}/>)
+                    productsState.map(product => <Product key = {product.sku} product = {product}/>)
                 }
             </div>
 
