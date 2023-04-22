@@ -19,8 +19,9 @@ function Product(props) {
             <div>
                 <p>{product.sku}</p>
                 <p>{product.name}</p>
-                <p>{Number(product.price).toFixed(2)}</p>
-                <p>Size: {product.attributes}</p>
+                <p>{Number(product.price).toFixed(2)}$</p>
+                
+                <p>{product.type === 'Book' ? 'Weight' : product.type === 'DVD'? 'Size': 'Deminsions'}: {product.attributes}</p>
             </div>
         </div>
     );

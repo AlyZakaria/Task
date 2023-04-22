@@ -1,4 +1,5 @@
 {
     "getProducts": "/products",
-    "deleteProducts": "/products"
+    "deleteProducts": "/products",
+    "addProduct": "/new-product"
 }

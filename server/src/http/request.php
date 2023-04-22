@@ -12,6 +12,6 @@ class Request{
     }
     public static function body(){
         $json = file_get_contents('php://input');
-        return json_decode($json);
+        return  json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $json), true );
     }
 }

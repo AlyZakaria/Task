@@ -9,7 +9,14 @@ use Src\Exceptions\NotFoundException;
 
 class ProductsController{
 
-
+    protected $types;
+    public function __construct() {
+        $this->types = [
+            'Book' =>  new Book() , 
+             'DVD' => new DVD() ,
+             'Furniture' => new Furniture()
+        ];
+    }
     public function all(){
         try{
             
@@ -43,5 +50,21 @@ class ProductsController{
             $response->sendResponse();
         }
     }
-
+    public function create(){
+            $response = null;
+            $product = Request::body();
+            // echo $product;
+            $createProduct = $this->types[$product['type']];
+            $createProduct->setValues($product);
+            $created = $createProduct->create();
+            try{
+                if($created)
+                    $response = new Response(200,"Products created successfully");
+                else  throw new Exception();
+            $response->sendResponse();
+            }catch(Exception $e){
+                $response = new Response(502,"Error");
+                $response->sendResponse();
+            }
+    }
 }

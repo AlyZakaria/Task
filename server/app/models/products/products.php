@@ -8,8 +8,7 @@ abstract class Products{
     protected $sku;
     protected $name;
     protected $price;
-    protected $attributes;
-    public static $type;
+    protected  $type;
 
 
     public static function all(){
@@ -35,7 +34,7 @@ abstract class Products{
         try{
             $conn->autocommit(FALSE);
             foreach($products as $product){
-                $conn->query("delete from products where sku = {$product->sku}");
+                $conn->query("delete from products where sku = '{$product['sku']}'");
             }
             if (!$conn->commit()) 
                 return false;
@@ -46,5 +45,13 @@ abstract class Products{
         }finally{
             MySQLManager::disconnect();
         }
+    }
+    public abstract function create(): bool;
+
+    protected function setValues($product){
+        $this->sku = $product['sku'];
+        $this->name = $product['name'];
+        $this->price = floatval($product['price']);
+        $this->type = $product['type'];
     }
 }
