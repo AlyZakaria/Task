@@ -27,7 +27,7 @@ function check(props){
     }
 
     if(props.type === "Book"){
-        if(props.weightRef.current.value == ''|| !attributesValid(props.weightRef.current.value)){
+        if(props.weightRef.current.value ===''|| !attributesValid(props.weightRef.current.value)){
             alert("Weight value is not valid!");
             return false;
         }
@@ -63,15 +63,17 @@ return product;
 
 
 function useAddProduct(props , save, setSave, done, setDone){
-    
-    const addProduct = async () =>{
+    async function addProduct (){
         try{
             let product = check(props);
             if(!product) return false;         
             const response = await axios.post(url,  JSON.stringify(product));
             if(response.status === 200) setDone(true);
-            else setDone(false);
+            else {
+                setDone(false);
+            }
         }catch(err){
+            if(err.response.status === 409) alert('SKU already exists!!');
             setDone(false);
         }finally{
             setSave(!save);
@@ -80,6 +82,7 @@ function useAddProduct(props , save, setSave, done, setDone){
 
     useEffect(() => {
         if(save) addProduct();
+    // eslint-disable-next-line
     }, [save])
 }
 
