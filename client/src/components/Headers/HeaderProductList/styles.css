@@ -4,7 +4,6 @@
     padding: 0px;
 }
 .header button{
-    /* height: 80%; */
     border-radius: 15px !important;
     margin: 5px;
     cursor: pointer !important;
@@ -19,12 +18,12 @@
 }
 @media (max-width: 400px){
     .header button{
-        /* height: 80%; */
         border-radius: 15px !important;
         margin: 5px;
         font-size: 15px;
         height: 70%;
-        text-transform: lowercase;
+        font-size: 12px;
+        text-align: center;
     }
     .btns{
         padding: 0px;

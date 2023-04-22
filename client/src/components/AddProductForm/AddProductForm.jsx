@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './styles.css';
 import Book from '../Book/Book';
 import DVD from '../DVD/DVD';

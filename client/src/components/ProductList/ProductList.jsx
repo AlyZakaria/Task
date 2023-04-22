@@ -1,4 +1,4 @@
-import Header from '../Header/Header'
+import HeaderProductList from '../Headers/HeaderProductList/HeaderProductList'
 import Products from '../Products/Products'
 import  {ProductsContext}  from '../../contexts/productsContext';
 import {useState } from 'react';
@@ -10,7 +10,7 @@ function ProductList() {
     useGetProducts(setProducts);
     return(
         <ProductsContext.Provider value = {{productsState,setProducts}}>
-            <Header />
+            <HeaderProductList />
             <Products  />
         </ProductsContext.Provider>
     );

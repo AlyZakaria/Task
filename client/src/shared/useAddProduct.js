@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {priceValid, attributesValid} from '../regex/regex';
+import {priceValid, attributesValid} from '../validation/validate';
 import axios from "../apis/axios";
 import urls from "../apis/url"
 

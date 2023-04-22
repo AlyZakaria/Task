@@ -1,4 +1,4 @@
-import AddProductHeader from '../AddProductHeader/AddProductHeader'
+import AddProductHeader from '../Headers/AddProductHeader/AddProductHeader'
 import AddProductForm from '../AddProductForm/AddProductForm'
 import { useState, useRef } from 'react';
 function AddProduct() {
