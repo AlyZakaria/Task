@@ -18,13 +18,16 @@ function autoload($class_name)
         'src/http',
 
     );
+    $x = 0;
     foreach($array_paths as $path)
-    {
-        $file = sprintf( __DIR__ . '/%s/%s.php', $path, $class_name);
+    {  
+        // if($x == 0)
+            // echo $_SERVER['DOCUMENT_ROOT'];
+        $file = sprintf( $_SERVER['DOCUMENT_ROOT'] . '/../%s/%s.php', $path, $class_name);
+        // echo $file . "<br>";
         if(is_file($file)) 
         {
             require_once $file;
-            // echo  $file . " ";
 
         } 
 

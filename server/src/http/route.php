@@ -26,13 +26,15 @@ class Route{
     }
         
     public function resolve(){
+        // var_dump ($_SERVER);
         $path = $this->request->path();
         $method = $this->request->method();
         $action = self::$routes[$method][$path] ?? false;
-        // var_dump( self::$routes);
+
         if(!$action){
-            echo "Not Found";
             http_response_code(404);    
+            echo "Not Found";
+
             return;
         } 
 

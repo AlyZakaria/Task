@@ -6,7 +6,7 @@
 // use Src\Database\MySQLManager;
 // use \mysqli;
 
-require_once __DIR__ . '/../products.php';
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/../app/models/products/Products.php';
 
 class Book extends Products{
     private $weight;

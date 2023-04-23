@@ -4,7 +4,7 @@
 // use Src\Database\DatabaseManager;
 // use \mysqli;
 
-class MySqlManager implements DatabaseManager{
+class MysqlManager implements DatabaseManager{
 
     protected static $conn;
 
@@ -15,7 +15,7 @@ class MySqlManager implements DatabaseManager{
             try{
                 self::$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD , DB_DATABASE);
                 mysqli_set_charset(self::$conn,"utf8");
-                $sql = file_get_contents(__DIR__ ."\..\..\initalize.sql");
+                $sql = file_get_contents($_SERVER['DOCUMENT_ROOT'] ."/../initalize.sql");
                 if (!self::$conn->multi_query($sql))                
                     throw new Exception("Table creation failed");
  

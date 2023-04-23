@@ -6,15 +6,22 @@
 // use App\Models\Products\Products;
 // use Src\Http\{Response,Request};
 // use Src\Exceptions\NotFoundException;
-require_once __DIR__ . '/../models/products/productTypes/book.php';
-require_once __DIR__ . '/../models/products/productTypes/dvd.php';
-require_once __DIR__ . '/../models/products/productTypes/furniture.php';
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/../app/models/products/productTypes/Book.php';
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/../app/models/products/productTypes/DVD.php';
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/../app/models/products/productTypes/Furniture.php';
 
 // use mysqli_sql_exception;
 
 class ProductsController{
 
-
+    protected $types;
+    public function __construct() {
+        $this->types = [
+            'Book' =>  new Book() , 
+            'DVD' => new DVD() ,
+            'Furniture' => new Furniture()
+        ];
+    }
 
     public function all(){
         try{
@@ -48,6 +55,9 @@ class ProductsController{
         try{    
             $response = new Response();
             $product = Request::body();
+            // $className = $product['type'];
+            // var_dump($product[0]);
+            // $createProduct = $this->types[$product['type']];
             $className = $product['type'];
             $createProduct = new $className();
             $createProduct->setValues($product);

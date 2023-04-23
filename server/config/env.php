@@ -1,7 +1,7 @@
 <?php
 
 // namespace Config;
-require_once __DIR__ . '/dotEnv.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/../config/DotEnv.php';
 
 class Env{  
 

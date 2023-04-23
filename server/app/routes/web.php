@@ -8,11 +8,11 @@
 // use Src\Http\Route;
 // use App\Controllers\ProductsController;
 
+
 Route::get('/' , function() {
     echo 'Home' . "\n";
 });
-Route::get('/home' , function() {
-    
+Route::get('/home' ,function() {
     echo 'Home' . "\n";
 });
 Route::get('/about' , function() {
@@ -21,4 +21,4 @@ Route::get('/about' , function() {
 
 Route::get('/products', [ProductsController::class, 'all']);
 Route::post('/products' , [ProductsController::class, 'deleteAll']);
-Route::post('/new-product' , [productsController::class, 'create']);
+Route::post('/new-product' , [ProductsController::class, 'create']);
