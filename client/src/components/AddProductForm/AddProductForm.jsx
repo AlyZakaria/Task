@@ -7,23 +7,23 @@ function AddProductForm(props){
     
     return (
         <div className="container">
-            <form>
-                <div className="formContainer row">
+            <form id = "product_form">
+                <div className="formContainer row" >
                     <div className = "">
                         <label htmlFor="sku">SKU</label> 
-                        <input type="text" ref = {props.skuRef}></input>
+                        <input type="text"id = "sku" ref = {props.skuRef}></input>
                     </div>
                     <div>
                         <label htmlFor="name">Name</label> 
-                        <input type="text" ref = {props.nameRef}></input>
+                        <input type="text" id = "name" ref = {props.nameRef}></input>
                     </div>
                     <div>
                         <label htmlFor="price">Price ($)</label> 
-                        <input type="text" ref = {props.priceRef}name="price" id="price"></input>
+                        <input type="text"  ref = {props.priceRef}name="price" id="price"></input>
                     </div>
                     <div>
                         <label htmlFor="type">Type Switcher</label>
-                        <select id="type" name="products" onChange={(e) => props.setType(e.target.value)} >
+                        <select id="productType" name="products" onChange={(e) => props.setType(e.target.value)} >
                             <option value="DVD">DVD-disc</option>
                             <option value="Book">Book</option>
                             <option value="Furniture">Furniture</option>

@@ -14,7 +14,7 @@ function Product(props) {
     return (
         <div className="product col-lg-2 col-md-3 col-sm-5 col-12">
             <div className="d-flex justify-content-left check">
-                <input type="checkbox" id = {product.sku} onClick={inputCheck} />
+                <input type="checkbox" className= ".delete-checkbox" id = {product.sku} onClick={inputCheck} />
             </div>
             <div>
                 <p>{product.sku}</p>
