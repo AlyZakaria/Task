@@ -12,13 +12,13 @@ function AddProductHeader(props){
     useAddProduct(props , save, setSave, done, setDone);
     if(done){
         setDone(!done);
-        navigate('/');
+        navigate('/Task');
     }
     function blueFunc(){
         setSave(!save);
     }
     function redFunc(){
-        navigate('/');
+        navigate('/Task');
     }
     let redBtn = 'Cancel';
     let blueBtn = 'Save';
