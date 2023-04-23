@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Products\ProductTypes;
+// namespace App\Models\Products\ProductTypes;
 
-use App\Models\Products\Products;
-use Src\Database\MySQLManager;
-use \mysqli;
+// use App\Models\Products\Products;
+// use Src\Database\MySQLManager;
+// use \mysqli;
 
 class DVD extends Products{
 

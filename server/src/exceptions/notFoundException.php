@@ -1,5 +1,5 @@
 <?php
-namespace Src\Exceptions;
+// namespace Src\Exceptions;
 
 class NotFoundException extends \Exception{
     

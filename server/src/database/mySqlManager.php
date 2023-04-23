@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Database;
-use Src\Database\DatabaseManager;
-use \mysqli;
+// namespace Src\Database;
+// use Src\Database\DatabaseManager;
+// use \mysqli;
 
 class MySqlManager implements DatabaseManager{
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+// namespace Config;
 require_once __DIR__ . '/dotEnv.php';
 
 class Env{  
@@ -24,7 +24,7 @@ class Env{
         return $_ENV;
     }    
     
-    public static function get(string $key): string | null {
+    public static function get(string $key) {
         return $_ENV[$key] ?? null;
     }
 }

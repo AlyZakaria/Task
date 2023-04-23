@@ -1,8 +1,8 @@
 <?php
-namespace App\Models\Products;
+// namespace App\Models\Products;
 
-use Src\Database\MySQLManager;
-use \mysqli;
+// use Src\Database\MySQLManager;
+// use \mysqli;
 
 abstract class Products{
     protected $sku;
@@ -12,7 +12,7 @@ abstract class Products{
 
 
     public static function all(){
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        // mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         $conn = MySQLManager::connect();
         try{
             $sql = "select * from products";

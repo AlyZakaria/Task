@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Database;
+// namespace Src\Database;
 
 interface DatabaseManager{
     public static function connect();

@@ -1,20 +1,29 @@
 {
     "name": "aly_zakaria/server",
-    "description": "scandiweb test assigment",
+    "description": "scandiweb task",
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Config\\": "config/",
-            "Src\\": "src/"
+            "AlyZakaria\\Server\\": "src/"
         }
     },
+    "config": {
+
+        "platform": {
+      
+          "php": "7.3"
+      
+        }
+      
+      },
+    
     "authors": [
         {
-            "name": "Aly Zakaria"
+            "name": "AlyZakaria",
+            "email": "77212759+AlyZakaria@users.noreply.github.com"
         }
     ],
     "require": {
         "vlucas/phpdotenv": "^5.5",
-        "symfony/var-dumper": "^6.2"
+        "php": ">=7.4"
     }
 }

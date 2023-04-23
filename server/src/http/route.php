@@ -1,9 +1,8 @@
 <?php
-declare(strict_types=1);
 
-namespace Src\Http;
+// namespace Src\Http;
 
-use Src\Http\{Request, Response};
+// use Src\Http\{Request, Response};
 
 class Route{
 
@@ -15,14 +14,14 @@ class Route{
         $this->request = $request;
         $this->response = $response;
     }
-    public static function get(string $route, callable|array|string $action){
+    public static function get(string $route,  $action){
         self::$routes['get'][$route] = $action;
     }
     
-    public static function post(string $route , callable|array|string $action){
+    public static function post(string $route ,$action){
         self::$routes['post'][$route] = $action;
     }
-    public static function delete(string $route , callable|array|string $action){
+    public static function delete(string $route ,  $action){
         self::$routes['delete'][$route] = $action;
     }
         
@@ -30,6 +29,7 @@ class Route{
         $path = $this->request->path();
         $method = $this->request->method();
         $action = self::$routes[$method][$path] ?? false;
+        // var_dump( self::$routes);
         if(!$action){
             echo "Not Found";
             http_response_code(404);    

@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Http;
+// namespace Src\Http;
 
 class Response{
     protected $statusCode;

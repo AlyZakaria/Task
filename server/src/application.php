@@ -1,10 +1,10 @@
 <?php
 
-namespace Src;
+// namespace Src;
 
-use Config\Env;
-use Src\Http\{Request, Response, Route};
-use Src\Database\MySqlManager;
+// use Config\Env;
+// use Src\Http\{Request, Response, Route};
+// use Src\Database\MySqlManager;
 
 class Application{
 

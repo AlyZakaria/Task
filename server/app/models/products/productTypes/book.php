@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Models\Products\ProductTypes;
+// namespace App\Models\Products\ProductTypes;
 
-use App\Models\Products\Products;
-use Src\Database\MySQLManager;
-use \mysqli;
+// use App\Models\Products\Products;
+// use Src\Database\MySQLManager;
+// use \mysqli;
+
+require_once __DIR__ . '/../products.php';
 
 class Book extends Products{
     private $weight;
