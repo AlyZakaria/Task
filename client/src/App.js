@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/Task" element={<ProductList />} />
+          <Route path="/Task/addproduct" element={<AddProduct />} />
         </Routes>
       </Router>
       <Footer />

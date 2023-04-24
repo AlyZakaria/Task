@@ -11,12 +11,10 @@ function useDeleteProducts(productsState, setProducts, deleteStatus, setDeleteSt
             let deletedProducts = productsState.filter(product => product.checked === true);
             let newProducts = productsState.filter(product => product.checked === false);
             const response = await axios.post(url, JSON.stringify(deletedProducts));
-            // console.log(response);
             if(response.status === 200)
                 setProducts(newProducts);
             
         }catch(err){
-            // console.log(err);
         }finally{
             setDeleteStatus(!deleteStatus);            
         }
