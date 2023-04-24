@@ -6,12 +6,10 @@ function Products(){
     let {productsState} = useContext(ProductsContext);
     
     return (
-
         <div className="container">
             <div className="row d-flex justify-content-center ">
-                {
-                    productsState.map(product => <Product key = {product.sku} product = {product}/>)
-                }
+                {!productsState.length? <h1>No Products Found</h1>: 
+                productsState.map(product => <Product key = {product.sku} product = {product}/>)}
             </div>
 
         </div>

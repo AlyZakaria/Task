@@ -10,7 +10,7 @@ function HeaderProductList(){
     let [deleteStatus, setDeleteStatus] = useState(false);
     let navigate = useNavigate();
     function blueFunc(){
-        navigate('/addproduct')
+        navigate('/Task/addproduct')
     }
     useDeleteProducts(productsState, setProducts, deleteStatus, setDeleteStatus);
 
@@ -21,7 +21,7 @@ function HeaderProductList(){
     let blueBtn = 'ADD';
     let headerTitle = 'Product List';
 
-    let props = {redBtn, blueBtn, headerTitle, redFunc, blueFunc};
+    let props = {redBtn, blueBtn, headerTitle, redFunc, blueFunc , productsState};
 
     return <Header {...props}/>
 }

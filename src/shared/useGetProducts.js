@@ -6,11 +6,15 @@ const url = urls.getProducts
 function useGetProducts(setProducts){
     useEffect( () =>{
         async function fetchData(){
-            const response = await axios.get(url);
-            if(response.status === 200)
-                setProducts(response.data.map((p) =>{
-                    return {...p,checked:false}
-                } ));
+            try{
+                const response = await axios.get(url);
+                if(response.status === 200)
+                    setProducts(response.data.map((p) =>{
+                        return {...p,checked:false}
+                    } ));
+            }catch(err){
+
+            }
         };
         fetchData();
     },[])

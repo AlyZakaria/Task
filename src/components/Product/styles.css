@@ -11,5 +11,5 @@
     margin: 8px;
 }
 .check > .delete-checkbox{
-    cursor: pointer;
+    cursor: pointer !important;
 }

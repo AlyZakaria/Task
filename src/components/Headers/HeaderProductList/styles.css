@@ -8,6 +8,8 @@
     margin: 5px;
     cursor: pointer !important;
     height: 70%;
+    font-size: 17px !important;
+    text-align: center !important;
 }
 .btns{
     justify-content: flex-end;
@@ -17,16 +19,19 @@
     padding-left: 0px;
 }
 @media (max-width: 400px){
-    .header button{
-        border-radius: 15px !important;
-        margin: 5px;
-        font-size: 15px;
-        height: 70%;
-        font-size: 12px;
-        text-align: center;
-    }
     .btns{
         padding: 0px;
     }
+    .header button{
+        margin: 0px;
+        border-radius: 15px !important;
+        margin: 5px;
+        height: 70%;
+        font-size: 12px !important;
+        text-transform: capitalize !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+
 }
 

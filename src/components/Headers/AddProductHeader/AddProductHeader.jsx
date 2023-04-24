@@ -21,7 +21,7 @@ function AddProductHeader(props){
         navigate('/Task');
     }
     let redBtn = 'Cancel';
-    let blueBtn = 'Save';
+    let blueBtn = 'Add';
     let headerTitle = 'Product Add';
     
     let data = {redBtn, blueBtn, headerTitle, redFunc, blueFunc};
