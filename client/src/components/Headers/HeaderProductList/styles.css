@@ -18,12 +18,21 @@
 .title{
     padding-left: 0px;
 }
+.ADD{
+    
+}
+#add-product-btn{
+
+}
+#delete-product-btn{
+
+}
 @media (max-width: 400px){
     .btns{
         padding: 0px;
     }
     .header button{
-        margin: 0px;
+        margin: 2px;
         border-radius: 15px !important;
         margin: 5px;
         height: 70%;
