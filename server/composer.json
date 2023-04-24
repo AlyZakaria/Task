@@ -3,19 +3,16 @@
     "description": "scandiweb task",
     "autoload": {
         "psr-4": {
-            "AlyZakaria\\Server\\": "src/"
+            "Src\\": "src/",
+            "App\\": "app/",
+            "config\\": "config"
         }
     },
     "config": {
-
         "platform": {
-      
           "php": "7.3"
-      
         }
-      
       },
-    
     "authors": [
         {
             "name": "AlyZakaria",
