@@ -10,6 +10,6 @@
 .product  p{
     margin: 8px;
 }
-.check > .delete-checkbox{
+.delete-checkbox{
     cursor: pointer !important;
 }
