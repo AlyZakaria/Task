@@ -1,6 +1,5 @@
 <?php
 
-// namespace Config;
 require $_SERVER['DOCUMENT_ROOT'] . '/../config/DotEnv.php';
 
 class Env{  

@@ -1,8 +1,5 @@
 <?php
 
-// namespace Src\Http;
-
-// use Src\Http\{Request, Response};
 
 class Route{
 
@@ -26,15 +23,12 @@ class Route{
     }
         
     public function resolve(){
-        // var_dump ($_SERVER);
         $path = $this->request->path();
         $method = $this->request->method();
         $action = self::$routes[$method][$path] ?? false;
-
         if(!$action){
             http_response_code(404);    
             echo "Not Found";
-
             return;
         } 
 

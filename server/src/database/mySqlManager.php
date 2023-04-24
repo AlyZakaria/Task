@@ -1,8 +1,5 @@
 <?php
 
-// namespace Src\Database;
-// use Src\Database\DatabaseManager;
-// use \mysqli;
 
 class MysqlManager implements DatabaseManager{
 
@@ -20,7 +17,6 @@ class MysqlManager implements DatabaseManager{
                     throw new Exception("Table creation failed");
  
             }catch (Exception $exp){
-                // echo "The Tables already exists";
             }finally{
                 return self::$conn;
             }
@@ -30,13 +26,11 @@ class MysqlManager implements DatabaseManager{
     public static function connect(){
         self::$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD , DB_DATABASE);
         return self::$conn;
-    
     }
     public static function disconnect(){
         if(self::$conn){
             mysqli_close(self::$conn);
             self::$conn = null;
         }
-            
     }
 }

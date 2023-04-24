@@ -1,10 +1,5 @@
 <?php
 
-// namespace Src;
-
-// use Config\Env;
-// use Src\Http\{Request, Response, Route};
-// use Src\Database\MySqlManager;
 
 class Application{
 
@@ -20,9 +15,6 @@ class Application{
     public function run(){
         Env::establish();
         MysqlManager::establish();
-        // MysqlManager::disconnect();
         $this->route->resolve();
-
-
     }
 }

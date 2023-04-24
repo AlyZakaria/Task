@@ -1,11 +1,8 @@
 <?php
 
 
-function autoload($class_name) 
-{
-
-    # List all the class directories in the array.
-    $array_paths = array(
+function autoload($className) {
+    $paths = [
         'app/controllers', 
         'app/models', 
         'app/routes',
@@ -17,20 +14,11 @@ function autoload($class_name)
         'src/exceptions',
         'src/http',
 
-    );
-    $x = 0;
-    foreach($array_paths as $path)
-    {  
-        // if($x == 0)
-            // echo $_SERVER['DOCUMENT_ROOT'];
-        $file = sprintf( $_SERVER['DOCUMENT_ROOT'] . '/../%s/%s.php', $path, $class_name);
-        // echo $file . "<br>";
+    ];
+    foreach($paths as $path){  
+        $file = sprintf( $_SERVER['DOCUMENT_ROOT'] . '/../%s/%s.php', $path, $className);
         if(is_file($file)) 
-        {
             require_once $file;
-
-        } 
-
     }
 }
 

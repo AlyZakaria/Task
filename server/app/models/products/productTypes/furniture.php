@@ -1,11 +1,5 @@
 <?php
 
-// namespace App\Models\Products\ProductTypes;
-
-// use App\Models\Products\Products;
-// use Src\Database\MySQLManager;
-// use \mysqli;
-
 class Furniture extends Products{
     private $height;
     private $width;
@@ -15,10 +9,9 @@ class Furniture extends Products{
     public function create(): bool{
         $conn = MySQLManager::connect();
         try{
-            $conn->autocommit(FALSE);
-            $conn->query("INSERT INTO products values ('{$this->sku}' , '{$this->name}', {$this->price}, '{$this->dimension}','{$this->type}')");
-            if (!$conn->commit()) 
-                return false;
+            $sql = "insert into products values ('{$this->sku}' , '{$this->name}', {$this->price},'{$this->dimension}', '{$this->type}')";
+            $result = $conn->query($sql);
+            if(!$result) return false;
             return true;
         }catch(Exception $e){
             return false;

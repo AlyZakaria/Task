@@ -1,6 +1,5 @@
 <?php
 
-// namespace Src\Http;
 
 class Response{
     protected $statusCode;
@@ -12,8 +11,8 @@ class Response{
     }
 
     public function sendResponse(){
-        echo json_encode($this->data);
         http_response_code($this->statusCode);
+        echo json_encode($this->data);
     }
 
 }
