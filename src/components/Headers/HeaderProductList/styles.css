@@ -18,6 +18,15 @@
 .title{
     padding-left: 0px;
 }
+.ADD{
+    
+}
+#add-product-btn{
+
+}
+#delete-product-btn{
+
+}
 @media (max-width: 400px){
     .btns{
         padding: 0px;
