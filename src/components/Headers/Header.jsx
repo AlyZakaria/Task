@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 
 function Header(props){
@@ -11,9 +10,7 @@ function Header(props){
                     <h1>{props.headerTitle}</h1>
                 </div>
                 <div className = "col-md-5  col-6 d-flex   btns">
-                <Link to = "Task/addproduct">
                 <button type="button" name = "ADD" id = "add-product-btn" className = "btn btn-primary ADD" onClick={props.blueFunc}>{props.blueBtn}</button>
-                </Link>
                  {(props.productsState !== 0) && <button name="MASS DELETE" type="button" id = "delete-product-btn" className = "btn btn-danger MASS-DELETE" onClick={props.redFunc}>{props.redBtn}</button>}
                  {(props.productsState === 0) && <button name="MASS DELETE" type="button" id = "delete-product-btn" className = "btn btn-danger MASS-DELETE" onClick={props.redFunc} disabled>{props.redBtn}</button>}
                 </div>

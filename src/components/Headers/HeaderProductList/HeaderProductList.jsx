@@ -10,7 +10,7 @@ function HeaderProductList(){
     let [deleteStatus, setDeleteStatus] = useState(false);
     let navigate = useNavigate();
     function blueFunc(){
-        navigate('/addproduct')
+        navigate('/Task/addproduct')
     }
     useDeleteProducts(productsState, setProducts, deleteStatus, setDeleteStatus);
 
