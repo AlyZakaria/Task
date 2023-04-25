@@ -6,7 +6,8 @@ export const priceValid = (price) => {
 };
 
 export const attributesValid = (first = 0, second = 0, third = 0) => {
-    if(Number(first) >= 0 && Number(second) >= 0 && Number(third) >= 0) 
-            return true;
+    const regex = /^[0-9]+.?[0-9]*$/;
+    if( regex.test(first) && regex.test(second) && regex.test(third) )
+        return true;
     return false;
 }

@@ -3,15 +3,16 @@ import Products from '../Products/Products'
 import  {ProductsContext}  from '../../contexts/productsContext';
 import {useState } from 'react';
 import useGetProducts from '../../shared/useGetProducts';
-
+import Loading from '../Loading/Loading';
 
 function ProductList() {
     let [productsState, setProducts] = useState([]);
-    useGetProducts(setProducts);
+    let loading = useGetProducts(setProducts);
     return(
         <ProductsContext.Provider value = {{productsState,setProducts}}>
             <HeaderProductList />
-            <Products  />
+            {!loading && <Products />}
+            {loading && <Loading />}
         </ProductsContext.Provider>
     );
 }
