@@ -1,12 +1,10 @@
-import './App.css';
-import ProductList from './components/ProductList/ProductList';
-import AddProduct from './components/AddProduct/AddProduct';
-import Footer from './components/Footer/Footer';
+import "./App.css";
+import ProductList from "./pages/ProductList/ProductList";
+import AddProduct from "./pages/AddProduct/AddProduct";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 function App() {
-
   return (
     <div className="App">
       <Router>
@@ -19,6 +17,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
